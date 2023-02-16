@@ -24,6 +24,8 @@
 
         <?php if($resultado == 1) : ?>
             <p class="alerta exito"> Propiedad Creada Exitosamente </p>
+        <?php elseif($resultado == 2) : ?>
+            <p class="alerta exito"> Propiedad Actualizada Exitosamente </p>
         <?php endif ?>
 
         <a href="/admin/propiedades/crear.php" class="boton-verde">Nueva Propiedad</a>
@@ -46,11 +48,11 @@
             <tbody>
                 <td><?php echo $propiedad['id'] ?></td>
                 <td><?php echo $propiedad['titulo'] ?></td>
-                <td> <img src="/imagenes/<?php echo $propiedad['imagen'] ?>" alt="Imagen Propiedad" class="imagen-tabla"> </td>
+                <td class="centrado-horizontal"> <img src="/imagenes/<?php echo $propiedad['imagen'] ?>" alt="Imagen Propiedad" class="imagen-tabla"> </td>
                 <td><?php echo $propiedad['precio'] ?></td>
                 <td>
-                    <a href="#" class="boton-rojo-block">Eliminar</a>
-                    <a href="#" class="boton-verde-block">Actualizar</a>
+                    <a href="/admin/propiedades/eliminar.php" class="boton-rojo-block">Eliminar</a>
+                    <a href="/admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>" class="boton-verde-block">Actualizar</a>
                 </td>
             </tbody>
 

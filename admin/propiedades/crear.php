@@ -126,7 +126,7 @@
 ?>
 
     <main class="contenedor seccion">
-        <h1>Crear</h1>
+        <h1>Crear Propiedad</h1>
         
         <a href="/admin" class="boton-verde">Volver</a>
 
@@ -190,7 +190,7 @@
                 </select>
             </fieldset>
 
-            <input type="submit" class="boton-verde">
+            <input type="submit" value="Crear Propiedad" class="boton-verde">
 
         </form>
 
